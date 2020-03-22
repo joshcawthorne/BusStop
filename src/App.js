@@ -85,9 +85,9 @@ export class App extends Component {
   getBusTimes = () => {
     let apiURL =
       "https://transportapi.com/v3/uk/places.json?lat=" +
-      leedsLat +
+      this.state.latitude +
       "&lon=" +
-      leedsLong +
+      this.state.longitude +
       "&type=bus_stop&app_id=" +
       app_id +
       "&app_key=" +
@@ -126,7 +126,7 @@ export class App extends Component {
 
   getStopData = code => {
     let stopApiUrl =
-      "httpss://transportapi.com/v3/uk/bus/stop/" +
+      "https://transportapi.com/v3/uk/bus/stop/" +
       code +
       "/live.json?app_id=" +
       app_id +
